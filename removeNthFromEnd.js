@@ -74,7 +74,7 @@ let removeNthFromEnd = function(head, n) {
 };
 
 /*
-First Attempt (02.04.2020):
+First Attempt (02.04.2021):
 Runtime: 88 ms, faster than 53.44% of JavaScript online submissions for Remove Nth Node From End of List.
 Memory Usage: 40.2 MB, less than 62.60% of JavaScript online submissions for Remove Nth Node From End of List.
 */
