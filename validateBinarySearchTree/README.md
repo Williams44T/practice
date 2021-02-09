@@ -28,16 +28,16 @@ A **valid BST** is defined as follows:
 ### *Example 1*
 ![](https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg)
 
-> **Input:** `root = [2, 1, 3]`  
-> **Output:** `true`  
+- **Input:** `root = [2, 1, 3]`  
+- **Output:** `true`  
 
 ---
 ### *Example 2*
 ![](https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg)
 
-> **Input:** `root = [5, 1, 4, null, null, 3, 6]`  
-> **Output:** `false`  
-> **Explanation:** The root node's value is 5 but its right child's value is 4.
+- **Input:** `root = [5, 1, 4, null, null, 3, 6]`  
+- **Output:** `false`  
+- **Explanation:** The root node's value is 5 but its right child's value is 4.
 
 ---
 ---
@@ -50,6 +50,8 @@ A **valid BST** is defined as follows:
 ## **Attempts**
 
 ### *Attempt 1*
+FEB 08 2021  
+
 Attempted Solution:
 ```
 var isValidBST = (root, max = 2 ** 31 - 1, min = -(2 ** 31)) => {
@@ -64,14 +66,16 @@ var isValidBST = (root, max = 2 ** 31 - 1, min = -(2 ** 31)) => {
 };
 ```
 Failed Test:
-> **Input:** `[2147483647]`  
-> **Expected:** `true`  
-> **Actual:** `false`  
-> **Explanation:**  The default range set by my max and min parameters needed to be set *at least* one integer wider in each direction.
+- **Input:** `[2147483647]`  
+- **Expected:** `true`  
+- **Actual:** `false`  
+- **Explanation:**  The default range set by my max and min parameters needed to be set *at least* one integer wider in each direction.
 
 ---
 ### *Attempt 2*
+FEB 08 2021  
+
 Success!  
 
-> **Runtime:** **92 ms**, faster than **59.90%** of JavaScript online submissions for Validate Binary Search Tree.  
-> **Memory Usage:** **43.2 MB**, less than **18.81%** of JavaScript online submissions for Validate Binary Search Tree.
+- **Runtime:** **92 ms**, faster than **59.90%** of JavaScript online submissions for Validate Binary Search Tree.  
+- **Memory Usage:** **43.2 MB**, less than **18.81%** of JavaScript online submissions for Validate Binary Search Tree.
