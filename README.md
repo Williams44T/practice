@@ -1,15 +1,27 @@
 # **Practice Problems**
 
 ## **Categories**
-- [Binary Search](#binarysearch)
-- [Linked Lists](#linkedlists)
+- [Binary Search](#binary-search)
+- [Binary Tree](#binary-tree)
+- [Depth First Search](#depth-first-search)
+- [Linked Lists](#linked-lists)
+- [Recursion](#recursion)
 ---
 
 ## **Problem List**
 
 ### **Binary Search**
-- **02.05.21** | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Leetcode
+- [Divide Two Integers](./divideTwoIntegers.js)
+
+### **Binary Tree**
+- [Validate Binary Search Tree](./validateBinarySearchTree)
+
+### **Depth First Search**
+- [Validate Binary Search Tree](./validateBinarySearchTree)
 
 ### **Linked Lists**
-- **02.04.21** | [Remove the nth node from the end of the list](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Leetcode
+- [Remove the nth node from the end of the list](./removeNthFromEnd.js)
+
+### **Recursion**
+- [Validate Binary Search Tree](./validateBinarySearchTree)
 
