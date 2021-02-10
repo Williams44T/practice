@@ -21,6 +21,7 @@
 
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
+- [Merge Two Sorted Lists](./mergeTwoSortedLists)
 
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
