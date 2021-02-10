@@ -15,9 +15,11 @@
 
 ### **Binary Tree**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
+- [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
 ### **Depth First Search**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
+- [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
@@ -25,4 +27,5 @@
 
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
+- [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
