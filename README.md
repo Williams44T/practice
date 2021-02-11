@@ -3,6 +3,7 @@
 ## **Categories**
 - [Binary Search](#binary-search)
 - [Binary Tree](#binary-tree)
+- [Breadth First Search](#breadth-first-search)
 - [Depth First Search](#depth-first-search)
 - [Linked Lists](#linked-lists)
 - [Recursion](#recursion)
@@ -16,6 +17,10 @@
 ### **Binary Tree**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
+- [Symmetric Tree](./symmetricTree)
+
+### **Breadth First Search**
+- [Symmetric Tree](./symmetricTree)
 
 ### **Depth First Search**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
