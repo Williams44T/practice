@@ -50,6 +50,7 @@ An **Anagram** is a word or phrase formed by rearranging the letters of a differ
 ## **Attempts**
 
 ### *Attempt 1*
+FEB 12 2021
 
 Attempted Solution:
 ```
@@ -112,3 +113,10 @@ Failed Test:
 
 ---
 ### *Attempt 2*
+FEB 12 2021
+
+Success!
+
+- **Runtime**: **9064 ms**, faster than **5.03%** of JavaScript online submissions for Group Anagrams.
+- **Memory Usage**: **67.4 MB**, less than **5.03%** of JavaScript online submissions for Group Anagrams.
+

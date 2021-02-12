@@ -7,6 +7,7 @@
 - [Depth First Search](#depth-first-search)
 - [Linked Lists](#linked-lists)
 - [Recursion](#recursion)
+- [Uncategorized](#uncategorezed)
 ---
 
 ## **Problem List**
@@ -33,4 +34,7 @@
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
+
+### **Uncategorized**
+- [Group Anagrams](./groupAnagrams)
 

@@ -12,16 +12,8 @@ var groupAnagrams = function(strs) {
       
     for (var i = 0; i < anagrams.length; i++) {
       var anagram = anagrams[i];
-      var anagramMatch = true;
-      
-      for (char in charCount) {
-        if (anagram[char] !== charCount[char]) {
-          anagramMatch = false;
-          break; 
-        }
-      }
-        
-      if (anagramMatch) { 
+
+      if (areAnagrams(charCount, anagram)) {
         isExistingAnagram = true;
         grouped[anagram.idx].push(str);
         break; 
@@ -50,5 +42,18 @@ var getCharCount = (str) => {
     }
   });
 
+  counts.total = str.length;
   return counts;
+};
+
+var areAnagrams = (test, anagram) => {
+  if (test.total !== anagram.total) { return false; }
+
+  for (char in test) {
+    if (test[char] !== anagram[char]) {
+      return false; 
+    }
+  }
+  
+  return true;
 };
