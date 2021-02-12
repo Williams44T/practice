@@ -5,9 +5,9 @@
 - [Binary Tree](#binary-tree)
 - [Breadth First Search](#breadth-first-search)
 - [Depth First Search](#depth-first-search)
+- [Hash Tables](#hash-tables)
 - [Linked Lists](#linked-lists)
 - [Recursion](#recursion)
-- [Uncategorized](#uncategorezed)
 ---
 
 ## **Problem List**
@@ -27,6 +27,9 @@
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
+### **Hash Tables**
+- [Group Anagrams](./groupAnagrams)
+
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
 - [Merge Two Sorted Lists](./mergeTwoSortedLists)
@@ -35,6 +38,4 @@
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
-### **Uncategorized**
-- [Group Anagrams](./groupAnagrams)
 

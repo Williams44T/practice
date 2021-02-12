@@ -9,6 +9,8 @@
 [Constraints](#constraints)  
 [Attempts](#attempts)  
 - [Attempt 1](#attempt-1)
+- [Attempt 2](#attempt-2)
+- [Attempt 3](#attempt-3)
 
 ---
 ---
@@ -115,8 +117,76 @@ Failed Test:
 ### *Attempt 2*
 FEB 12 2021
 
-Success!
+Attempted Solution:
+```
+var groupAnagrams = function(strs) {
+  grouped = [];
+  anagrams = [];
+
+  strs.forEach(str => {
+    var charCount = getCharCount(str);
+    var isExistingAnagram = false;
+      
+    for (var i = 0; i < anagrams.length; i++) {
+      var anagram = anagrams[i];
+
+      if (areAnagrams(charCount, anagram)) {
+        isExistingAnagram = true;
+        grouped[anagram.idx].push(str);
+        break; 
+      }
+    }
+
+    if (!isExistingAnagram) {
+      grouped[anagrams.length] = [];
+      charCount.idx = anagrams.length;
+      anagrams.push(charCount);
+      grouped[charCount.idx].push(str);
+    }
+  });
+
+  return grouped;
+};
+
+var getCharCount = (str) => {
+  var counts = {};
+
+  str.split('').forEach(char => {
+    if (counts[char] === undefined) {
+      counts[char] = 1;
+    } else {
+      counts[char]++;
+    }
+  });
+
+  counts.total = str.length;
+  return counts;
+};
+
+var areAnagrams = (test, anagram) => {
+  if (test.total !== anagram.total) { return false; }
+
+  for (char in test) {
+    if (test[char] !== anagram[char]) {
+      return false; 
+    }
+  }
+  
+  return true;
+};
+```
+
+Success! But very inefficient. After looking at other solutions, I now know that I should have used a Map.
 
 - **Runtime**: **9064 ms**, faster than **5.03%** of JavaScript online submissions for Group Anagrams.
 - **Memory Usage**: **67.4 MB**, less than **5.03%** of JavaScript online submissions for Group Anagrams.
+
+---
+### Attempt 3
+FEB 12 2021
+
+Success! Again. But I had help this time.
+
+- **Runtime**: **116 ms**, faster than **97.10%** of JavaScript online submissions for Group Anagrams.
+- **Memory Usage**: **48.1 MB**, less than **96.77%** of JavaScript online submissions for Group Anagrams.
 
