@@ -70,3 +70,19 @@ Success!
 - **Runtime**: **92 ms**, faster than **68.78%** of JavaScript online submissions for Single Number.
 - **Memory Usage**: **44.8 MB**, less than **17.20%** of JavaScript online submissions for Single Number.
 
+---
+### **Attempt 2**
+FEB 16 2021
+
+Attempted Solution:
+```
+var singleNumber = function(nums) {
+    return nums.reduce((acc, num) => acc ^ num);
+};
+```
+
+Success! Improved solution after reviewing other solutions.
+
+- **Runtime**: **84 ms**, faster than **87.03%** of JavaScript online submissions for Single Number.
+- **Memory Usage**: **40.4 MB**, less than **79.86%** of JavaScript online submissions for Single Number.
+
