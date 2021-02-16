@@ -3,6 +3,7 @@
 ## **Categories**
 - [Binary Search](#binary-search)
 - [Binary Tree](#binary-tree)
+- [Bit Manipulation](#bit-manipulation)
 - [Breadth First Search](#breadth-first-search)
 - [Depth First Search](#depth-first-search)
 - [Hash Tables](#hash-tables)
@@ -20,6 +21,9 @@
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 - [Symmetric Tree](./symmetricTree)
 
+### **Bit Manipulation**
+- [Single Number](./singleNumber)
+
 ### **Breadth First Search**
 - [Symmetric Tree](./symmetricTree)
 
@@ -29,6 +33,7 @@
 
 ### **Hash Tables**
 - [Group Anagrams](./groupAnagrams)
+- [Single Number](./singleNumber)
 
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
