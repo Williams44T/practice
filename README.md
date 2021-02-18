@@ -39,6 +39,7 @@
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
 - [Merge Two Sorted Lists](./mergeTwoSortedLists)
+- [Swap Nodes in Pairs](./swapNodesinPairs)
 
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
