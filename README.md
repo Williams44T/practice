@@ -34,6 +34,7 @@
 ### **Hash Tables**
 - [Group Anagrams](./groupAnagrams)
 - [Single Number](./singleNumber)
+- [Four Sum](./foursum)
 
 ### **Linked Lists**
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
