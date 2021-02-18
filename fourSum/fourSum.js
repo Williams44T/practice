@@ -23,19 +23,19 @@ var fourSum = function(nums, target) {
 
   for (var i = 0; i < nums.length - 3; i++) {
     var a = nums[i];
-    if (a > target) { break; }
+    if (a >= 0 && a > target) { break; }
 
     for (var j = i + 1; j < nums.length - 2; j++) {
       var b = nums[j];
-      if (a + b > target) { break; }
+      if (b >= 0 && a + b > target) { break; }
 
       for (var k = j + 1; k < nums.length - 1; k++) {
         var c = nums[k];
-        if (a + b + c > target) { break; }
+        if (c >= 0 && a + b + c > target) { break; }
 
         for (var l = k + 1; l < nums.length; l++) {
           var d = nums[l];
-          if (a + b + c + d > target) { break; }
+          if (d >= 0 && a + b + c + d > target) { break; }
 
           if (a + b + c + d === target) {
             var key = '' + a + b + c + d;
