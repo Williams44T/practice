@@ -1,12 +1,25 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[][]}
- */
+var swap = (a, b, nums) => {
+  var temp = nums[b];
+  nums[b] = nums[a];
+  nums[a] = temp;
+};
+
+var sort = (nums) => {
+  for (var i = 0; i < nums.length - 1; i++) {
+    if (nums[i + 1] >= nums[i]) { continue; }
+    swap(i + 1, i, nums);
+
+    for (var j = i - 1; j >= 0; j--) {
+      if (nums[j+1] >= nums[j]) { break; }
+      swap(j + 1, j, nums);
+    }
+  }
+};
+
 var fourSum = function(nums, target) {
   var result = [];
   var visited = new Map;
-  nums.sort();
+  sort(nums);
 
   for (var i = 0; i < nums.length - 3; i++) {
     var a = nums[i];
