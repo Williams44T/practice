@@ -9,6 +9,7 @@
 [Constraints](#constraints)  
 [Attempts](#attempts)  
 - [Attempt 1 (Success)](#attempt-1)
+- [Attempt 2 (Success)](#attempt-2)
 
 ---
 ---
@@ -72,3 +73,37 @@ Success!
 - **Runtime**: **84 ms**, faster than **28.46%** of JavaScript online submissions for Swap Nodes in Pairs.
 - **Memory Usage**: **39 MB**, less than **14.92%** of JavaScript online submissions for Swap Nodes in Pairs.
 
+---
+### *Attempt 2*
+FEB 18 2021
+
+Attempted Solution
+```
+var ListNode = (val, next) => {
+  return {
+      val,
+      next: next || null,
+  }
+}
+
+var swapPairs = function(head) {
+  var tempHead = ListNode(0, head);
+
+  var current = tempHead
+  while (current.next && current.next.next) {
+    var right = current.next;
+    var left = current.next.next;
+    right.next = left.next;
+    current.next = left;
+    left.next = right;
+    current = right;
+  }
+
+  return tempHead.next;
+};
+```
+
+Success! This was actually the first solution I came up with, but I changed it before I submitted it becauase I figured swapping values instead of nodes would be faster. Then I saw that the fastest solution on Leetcode was this solution! Yet when I resubmitted it, the speed is slower. Some factors unknown to me are at play.
+
+**Runtime**: **88 ms**, faster than **18.95%** of JavaScript online submissions for Swap Nodes in Pairs.
+**Memory Usage**: **38.7 MB**, less than **68.45%** of JavaScript online submissions for Swap Nodes in Pairs.

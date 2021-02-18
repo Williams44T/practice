@@ -1,13 +1,22 @@
+var ListNode = (val, next) => {
+  return {
+      val,
+      next: next || null,
+  }
+}
+
 var swapPairs = function(head) {
-  var result = head;
-  
-  var current = head;
-  while (current && current.next) {
-    var temp = current.val;
-    current.val = current.next.val;
-    current.next.val = temp;
-    current = current.next.next;
+  var tempHead = ListNode(0, head);
+
+  var current = tempHead
+  while (current.next && current.next.next) {
+    var right = current.next;
+    var left = current.next.next;
+    right.next = left.next;
+    current.next = left;
+    left.next = right;
+    current = right;
   }
 
-  return result;
+  return tempHead.next;
 };
