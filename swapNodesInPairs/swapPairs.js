@@ -20,3 +20,5 @@ var swapPairs = function(head) {
 
   return tempHead.next;
 };
+
+module.exports = swapPairs;
