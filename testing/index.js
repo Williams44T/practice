@@ -3,4 +3,6 @@ module.exports = {
   assertArraysEqual: require('./assertArraysEqual'),
   arrayToBST: require('./arrayToBST'),
   BSTtoArray: require('./BSTtoArray'),
+  arrayToLinkedList: require('./arrayToLinkedList'),
+  linkedListToArray: require('./linkedListToArray'),
 };
