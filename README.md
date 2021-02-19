@@ -20,12 +20,14 @@
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 - [Symmetric Tree](./symmetricTree)
+- [Same Tree](./sameTree)
 
 ### **Bit Manipulation**
 - [Single Number](./singleNumber)
 
 ### **Breadth First Search**
 - [Symmetric Tree](./symmetricTree)
+- [Same Tree](./sameTree)
 
 ### **Depth First Search**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
