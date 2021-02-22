@@ -5,6 +5,10 @@ class KthLargest {
   }
     
   add(val) {
+    if (this.k === 0) { 
+      this.nums[0] = this.nums[0] === undefined ? val : Math.max(this.nums[0], val);
+      return this.nums[0];
+    }
     if (val <= this.nums[this.k]) { return this.nums[this.k]; }
     if (val >= this.nums[0]) {
       this.insert(0, val);
