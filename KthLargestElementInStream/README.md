@@ -1,4 +1,4 @@
-# [**Same Tree**](https://leetcode.com/problems/same-tree/)
+# [**Kth Largest Element in Stream**](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
 [Prompt](#prompt)  
 [Examples](#examples)
@@ -8,6 +8,7 @@
 [Attempts](#attempts)  
 - [Attempt 1](#attempt-1)
 - [Attempt 2](#attempt-2)  
+- [Attempt 3](#attempt-3)
 
 ---
 ---
@@ -174,3 +175,62 @@ Failed Test:
 - **Explanation:** I did not account for cases were `k` is larger than `nums` length.
 
 ---
+### *Attempt 3*
+FEB 23 2021
+
+Attempted Solution:
+```
+class KthLargest {
+  constructor(k, nums) {
+    this.k = k - 1;
+    this.nums = this.initialize(k, nums);
+  }
+    
+  initialize (k, nums) {
+    nums.sort((a, b) => b - a).slice(0, k);
+    if (k - 1 <= nums.length) { nums.push(-10000); } //min val per constraints
+    return nums;
+  }
+    
+  add(val) {
+    if (val <= this.nums[this.k]) { return this.nums[this.k]; }
+    if (val >= this.nums[0]) {
+      this.insert(0, val);
+      return this.nums[this.k];
+    }
+
+    var right = this.k;
+    var left = 0;
+    var mid = this.getMid(right, left);
+      
+    while ((right - left) > 1) {
+      if (this.nums[mid] === val) {
+        this.insert(mid + 1, val);
+        return this.nums[this.k];
+      } else if (this.nums[mid] > val) {
+        left = mid;
+        mid = this.getMid(right, left);
+      } else {
+        right = mid;
+        mid = this.getMid(right, left);
+      }
+    }
+      
+    this.insert(right, val);
+    return this.nums[this.k];
+  }
+    
+  insert(idx, val) {
+    this.nums.splice(idx, 0, val);
+    this.nums.pop();
+  }
+    
+  getMid(right, left) {
+    return Math.floor((right - left) / 2) + left;
+  }
+};
+```
+
+Success! Finally
+- **Runtime**: **132 ms**, faster than **98.88%** of JavaScript online submissions for Kth Largest Element in a Stream.
+- **Memory Usage**: **47.1 MB**, less than **81.01%** of JavaScript online submissions for Kth Largest Element in a Stream.

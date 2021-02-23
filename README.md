@@ -16,6 +16,7 @@
 
 ### **Binary Search**
 - [Divide Two Integers](./divideTwoIntegers.js)
+- [Kth Largest Element in a Stream](./kthLargestElementInStream)
 
 ### **Binary Tree**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
