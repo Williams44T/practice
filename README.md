@@ -9,6 +9,7 @@
 - [Hash Tables](#hash-tables)
 - [Linked Lists](#linked-lists)
 - [Recursion](#recursion)
+- [Trie](#trie)
 ---
 
 ## **Problem List**
@@ -46,5 +47,8 @@
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
+
+### **Trie**
+- [Implement Trie (Prefix Tree)](./implementTrie)
 
 
