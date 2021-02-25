@@ -138,3 +138,68 @@ Failed Test:
 - **Explanation:** This input places two lamps on the same square. So although my solution turns one of these off after the first query, the other one remains on. I should change my solution to only allow one lamp per square.
 
 ---
+### *Attempt 2*
+FEB 24 2021
+
+Attempted Solution:
+```
+let toggleLamp = function(grid, row, col, val) {
+  if (val === 1 && grid.lamps[`${row}+${col}`]) { return; }
+  let {lamps, rows, cols, upDiags, downDiags } = grid;
+
+  lamps[`${row}+${col}`] = val;
+  rows[row] ? rows[row] += val : rows[row] = val;
+  cols[col] ? cols[col] += val : cols[col] = val;
+  upDiags[row + col] ? upDiags[row + col] += val : upDiags[row + col] = val;
+  downDiags[row - col] ? downDiags[row - col] += val : downDiags[row - col] = val;
+}
+
+let turnOffLamp = function(grid, row, col) {
+  if (grid.lamps[`${row}+${col}`] === 1) { 
+    toggleLamp(grid, row, col, -1); 
+  }
+}
+
+let gridIllumination = function(N, lamps, queries) {
+  let grid = {
+    lamps: {},
+    rows: {},
+    cols: {},
+    upDiags: {},
+    downDiags: {},
+  };
+  
+  lamps.forEach(([row, col]) => toggleLamp(grid, row, col, 1));
+  
+  let result = [];
+  queries.forEach(([row, col]) => {
+      if (
+        grid.rows[row] ||
+        grid.cols[col] ||
+        grid.upDiags[row + col] ||
+        grid.downDiags[row - col]
+      ) { 
+        result.push(1); 
+      } else {
+        result.push(0);
+      }
+
+      turnOffLamp(grid, row, col);
+      turnOffLamp(grid, --row, col);
+      turnOffLamp(grid, row, ++col);
+      turnOffLamp(grid, ++row, col);
+      turnOffLamp(grid, ++row, col);
+      turnOffLamp(grid, row, --col);
+      turnOffLamp(grid, row, --col);
+      turnOffLamp(grid, --row, col);
+      turnOffLamp(grid, --row, col);
+  });
+  
+  return result;
+};
+```
+
+Success!
+
+- **Runtime**: **884 ms**, faster than **34.09%** of JavaScript online submissions for Grid Illumination.
+- **Memory Usage**: **72.9 MB**, less than **63.64%** of JavaScript online submissions for Grid Illumination.

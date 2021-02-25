@@ -1,4 +1,5 @@
 let toggleLamp = function(grid, row, col, val) {
+  if (val === 1 && grid.lamps[`${row}+${col}`]) { return; }
   let {lamps, rows, cols, upDiags, downDiags } = grid;
 
   lamps[`${row}+${col}`] = val;
