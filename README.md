@@ -52,6 +52,7 @@
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
+- [Integer to Roman](./integerToRoman)
 
 ### **Trie**
 - [Implement Trie (Prefix Tree)](./implementTrie)
