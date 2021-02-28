@@ -53,6 +53,7 @@
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 - [Integer to Roman](./integerToRoman)
+- [Roman to Integer](./romanToInteger)
 
 ### **Trie**
 - [Implement Trie (Prefix Tree)](./implementTrie)
