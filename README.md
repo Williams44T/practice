@@ -54,6 +54,7 @@
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 - [Integer to Roman](./integerToRoman)
 - [Roman to Integer](./romanToInteger)
+- [Letter Combos of Phone Number](./phoneNumLetterCombos)
 
 ### **Trie**
 - [Implement Trie (Prefix Tree)](./implementTrie)
