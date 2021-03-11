@@ -10,6 +10,7 @@
 - [Linked Lists](#linked-lists)
 - [Multiple Pointers](#multiple-pointers)
 - [Recursion](#recursion)
+- [Stack] (#stack)
 - [Trie](#trie)
 ---
 
@@ -55,6 +56,9 @@
 - [Integer to Roman](./integerToRoman)
 - [Roman to Integer](./romanToInteger)
 - [Letter Combos of Phone Number](./phoneNumLetterCombos)
+
+### **Stack**
+- [Valid Parens](./validParens)
 
 ### **Trie**
 - [Implement Trie (Prefix Tree)](./implementTrie)
