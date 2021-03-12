@@ -56,6 +56,7 @@
 - [Integer to Roman](./integerToRoman)
 - [Roman to Integer](./romanToInteger)
 - [Letter Combos of Phone Number](./phoneNumLetterCombos)
+- [Generate Parens](./generateParens)
 
 ### **Stack**
 - [Valid Parens](./validParens)
