@@ -6,11 +6,12 @@
 - [Bit Manipulation](#bit-manipulation)
 - [Breadth First Search](#breadth-first-search)
 - [Depth First Search](#depth-first-search)
+- [Frequency Counter](#frequency-counter)
 - [Hash Tables](#hash-tables)
 - [Linked Lists](#linked-lists)
 - [Multiple Pointers](#multiple-pointers)
 - [Recursion](#recursion)
-- [Stack] (#stack)
+- [Stack](#stack)
 - [Trie](#trie)
 ---
 
@@ -37,6 +38,9 @@
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
 
+### **Frequency Counter**
+- [Merge K Sorted Lists](./MergeKSortedLists)
+
 ### **Hash Tables**
 - [Group Anagrams](./groupAnagrams)
 - [Single Number](./singleNumber)
@@ -46,6 +50,7 @@
 - [Remove the nth node from the end of the list](./removeNthFromEnd.js)
 - [Merge Two Sorted Lists](./mergeTwoSortedLists)
 - [Swap Nodes in Pairs](./swapNodesinPairs)
+- [Merge K Sorted Lists](./MergeKSortedLists)
 
 ### **Multiple Pointers**
 - [Container With Most Water](./containerWithMostWater)
