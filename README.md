@@ -51,6 +51,7 @@
 - [Merge Two Sorted Lists](./mergeTwoSortedLists)
 - [Swap Nodes in Pairs](./swapNodesinPairs)
 - [Merge K Sorted Lists](./MergeKSortedLists)
+- [Reverse Nodes in K Groups](./reverseNodesInKGroup)
 
 ### **Multiple Pointers**
 - [Container With Most Water](./containerWithMostWater)
