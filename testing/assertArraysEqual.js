@@ -14,9 +14,9 @@ var assertArraysEqual = (actual, expected, testName) => {
     console.log('PASS:', testName);
   } else {
     console.log('FAIL:', testName);
+  }
     console.log('   EXPECTED:', expected);
     console.log('   ACTUAL  :', actual);
-  }
 };
 
 module.exports = assertArraysEqual;
