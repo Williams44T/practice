@@ -55,6 +55,7 @@
 
 ### **Multiple Pointers**
 - [Container With Most Water](./containerWithMostWater)
+- [Remove Element](./removeElement)
 
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
