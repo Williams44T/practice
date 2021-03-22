@@ -8,6 +8,7 @@
 [Constraints](#constraints)  
 [Attempts](#attempts)  
 - [Attempt 1 - Success](#attempt-1)
+- [Attempt 2 - Success](#attempt-2)
 
 ---
 ---
@@ -118,3 +119,38 @@ Success
 
 - **Runtime**: **156 ms**, faster than **7.55%** of JavaScript online submissions for Number of Islands.
 - **Memory Usage**: **55.4 MB**, less than **5.14%** of JavaScript online submissions for Number of Islands.
+
+### *Attempt 2*
+
+Attempted Solution:
+MAR 21 2021
+
+```
+function numIslands(grid) {
+    function explore(r, c) {
+        if (!grid[r] || grid[r][c] !== '1') { return; }
+        grid[r][c] = 'X';
+        explore(r, ++c);
+        explore(++r, --c);
+        explore(--r, --c);
+        explore(--r, ++c);
+    }
+
+    let islands = 0;
+
+    for (let row = 0; row < grid.length; row++) {
+        for (let col = 0; col < grid[row].length; col++) {
+            if (grid[row][col] === '1') {
+                islands++;
+                explore(row, col);
+            }
+        }
+    }
+    return islands;
+}
+```
+
+Success! After reviewing other solutions
+
+- **Runtime**: **80 ms**, faster than **93.09%** of JavaScript online submissions for Number of Islands.
+- **Memory Usage**: **39.4 MB**, less than **88.56%** of JavaScript online submissions for Number of Islands.
