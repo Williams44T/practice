@@ -64,6 +64,7 @@
 - [Roman to Integer](./romanToInteger)
 - [Letter Combos of Phone Number](./phoneNumLetterCombos)
 - [Generate Parens](./generateParens)
+- [Number of Islands](./numberOfIslands)
 
 ### **Stack**
 - [Valid Parens](./validParens)
