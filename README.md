@@ -37,6 +37,7 @@
 ### **Depth First Search**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
 - [Binary Search Tree to Greater Sum Tree](./bstToGst)
+- [Sudoku Sovler](./sudokuSolver)
 
 ### **Frequency Counter**
 - [Merge K Sorted Lists](./MergeKSortedLists)
