@@ -6,7 +6,8 @@
 
 [Constraints](#constraints)  
 [Attempts](#attempts)  
-- [Attempt 1](#attempt-1)
+- [Attempt 1](#attempt-1)  
+- [Attempt 2 - Success!](#attempt-2)  
 
 ---
 ---
@@ -212,4 +213,61 @@ Failed Test:
 ```
 **Explanation:** I mistakenly believed that the approached I used would render a solved puzzle after iterating thru all 81 squares just once.
 
+---
+### *Attempt 2*
+MAR 25 2021
 
+Attempted Solution:
+```
+function solveSudoku(board) {
+    let rows = {};
+    let cols = {};
+    let boxes = {};
+    for (let i = 0; i < 9; i++) {
+        rows[i] = [];
+        cols[i] = [];
+        boxes[i] = [];
+    }
+
+    function toggle(row, col, box, num, bool) {
+        rows[row][num] = bool;
+        cols[col][num] = bool;
+        boxes[box][num] = bool;
+    }
+
+    for (let row = 0; row < 9; row++) {
+        for (let col = 0; col < 9; col++) {
+            if (board[row][col] === '.') { continue; }
+            toggle(row, col, ~~(row/3)*3 + ~~(col/3), board[row][col], true);
+        }
+    }
+    
+    (function solve(row, col) {
+        if (row === 8 && col === 9) { return true; }
+        if (col === 9) {
+            col = 0;
+            row++;
+        }
+
+        if (board[row][col] !== '.') { return solve(row, ++col); }
+
+        let box = ~~(row/3)*3 + ~~(col/3);
+        for (let num = 1; num <= 9; num++) {
+            if (rows[row][num]) { continue; }
+            if (cols[col][num]) { continue; }
+            if (boxes[box][num]) { continue; }
+            board[row][col] = String(num);
+            toggle(row, col, box, num, true);
+            if (solve(row, col + 1)) { return true; }
+            toggle(row, col, box, num, false);
+        }
+
+        board[row][col] = '.';
+    })(0, 0);
+}
+```
+
+Success! I had view some solutions, but I was on the right track.
+
+- **Runtime**: **100 ms**, faster than **95.18%** of JavaScript online submissions for Sudoku Solver.
+- **Memory Usage**: **40.8 MB**, less than **50.30%** of JavaScript online submissions for Sudoku Solver.
