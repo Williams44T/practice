@@ -1,12 +1,7 @@
 function solveSudoku(board) {
-    let rows = {};
-    let cols = {};
-    let boxes = {};
-    for (let i = 0; i < 9; i++) {
-        rows[i] = [];
-        cols[i] = [];
-        boxes[i] = [];
-    }
+    let rows = Array(9).fill().map(() => []);
+    let cols = Array(9).fill().map(() => []);
+    let boxes = Array(9).fill().map(() => []);
 
     function toggle(row, col, box, num, bool) {
         rows[row][num] = bool;
@@ -14,22 +9,18 @@ function solveSudoku(board) {
         boxes[box][num] = bool;
     }
 
+    let blanks = [];
     for (let row = 0; row < 9; row++) {
         for (let col = 0; col < 9; col++) {
-            if (board[row][col] === '.') { continue; }
-            toggle(row, col, ~~(row/3)*3 + ~~(col/3), board[row][col], true);
+            board[row][col] === '.'
+            ? blanks.push([row, col])
+            : toggle(row, col, ~~(row/3)*3 + ~~(col/3), board[row][col], true);
         }
     }
     
-    (function solve(row, col) {
-        if (row === 8 && col === 9) { return true; }
-        if (col === 9) {
-            col = 0;
-            row++;
-        }
-
-        if (board[row][col] !== '.') { return solve(row, ++col); }
-
+    (function solve(i) {
+        if (i === blanks.length) { return true; }
+        let [row, col] = blanks[i];
         let box = ~~(row/3)*3 + ~~(col/3);
         for (let num = 1; num <= 9; num++) {
             if (rows[row][num]) { continue; }
@@ -37,12 +28,12 @@ function solveSudoku(board) {
             if (boxes[box][num]) { continue; }
             board[row][col] = String(num);
             toggle(row, col, box, num, true);
-            if (solve(row, col + 1)) { return true; }
+            if (solve(i + 1)) { return true; }
             toggle(row, col, box, num, false);
         }
-
         board[row][col] = '.';
-    })(0, 0);
+    })(0);
+    console.log(board);
 }
 
 let input = [
@@ -55,6 +46,18 @@ let input = [
     [".",".",".","8",".","3",".","2","."],
     [".",".",".",".",".",".",".",".","6"],
     [".",".",".","2","7","5","9",".","."]
+];
+
+input = [
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
+    [".",".",".",".",".",".",".",".","."],
 ];
 
 solveSudoku(input);
