@@ -57,6 +57,7 @@
 ### **Multiple Pointers**
 - [Container With Most Water](./containerWithMostWater)
 - [Remove Element](./removeElement)
+- [Count and Say](./countAndSay)
 
 ### **Recursion**
 - [Validate Binary Search Tree](./validateBinarySearchTree)
@@ -66,6 +67,7 @@
 - [Letter Combos of Phone Number](./phoneNumLetterCombos)
 - [Generate Parens](./generateParens)
 - [Number of Islands](./numberOfIslands)
+- [Count and Say](./countAndSay)
 
 ### **Stack**
 - [Valid Parens](./validParens)
